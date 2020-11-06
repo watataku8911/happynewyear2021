@@ -2,17 +2,20 @@
   <div id="app">
     <transition name="fade">
       <section class="opning" v-show="!isLoading">
-        <p class="opning-msg anim-typewriter">Happy new year 2021</p>
+        <p class="opning-msg anim-typewriter">うっさいわあほ！！！！！！</p>
       </section>
     </transition>
+
     <transition name="show">
-      <section class="wrapper" v-show="isLoading">
-        <div class="triangle-left"></div>
-        <div class="triangle-right"></div>
+      <section class="main-contents" v-show="isLoading">
         <Header />
-        <main>
-          <HelloWorld />
-        </main>
+        <div class="wrapper">
+          <div class="triangle-left"></div>
+          <div class="triangle-right"></div>
+          <main>
+            <HelloWorld />
+          </main>
+        </div>
         <Footer />
       </section>
     </transition>
@@ -48,6 +51,11 @@ export default {
 /* -------------------------------
 --------アニメーション----------------
 ------------------------------------ */
+.show-leave-active,
+.show-enter-active {
+  transition: opacity 1s;
+}
+
 .fade-leave-active,
 .fade-enter-active {
   transition: opacity 1s;
@@ -68,26 +76,14 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
-
-.show-leave-active,
-.show-enter-active {
-  transition: opacity 1s;
-}
 /* ------------------------------------ */
 body {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+  /* margin-top: 2vh; */
   background-color: #87c0bb;
 }
 
-.wrapper {
-  padding-bottom: 2vh;
-  width: 90%;
-  margin: auto;
-  border: solid 10px #eede93;
-}
-
 .opning {
+  margin-top: -2vh;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -95,12 +91,11 @@ body {
 
 .opning-msg {
   position: relative;
-  top: 40%;
+  top: 45%;
   margin: 0 auto;
   width: 30%;
-  height: 7vh;
-  border-right: 0.5vw solid rgba(255, 255, 255, 0.75);
-  font-size: 3vw;
+  height: 30px;
+  font-size: 2em;
   font-family: "Kaushan Script", cursive;
   font-family: "Bad Script", cursive;
   font-weight: bold;
@@ -112,48 +107,96 @@ body {
 }
 /* Animation */
 .anim-typewriter {
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-    blinkTextCursor 500ms steps(44) infinite normal;
+  animation: typewriter 4s steps(44) 1s 1 normal both;
 }
 @keyframes typewriter {
   from {
     width: 0;
   }
   to {
-    width: 30%;
+    width: 100%;
   }
-}
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-.triangle-left {
-  float: left;
-  width: 0;
-  height: 0;
-  border: 200px solid transparent;
-  border-top: 200px solid #eede93;
-  border-left: 200px solid #eede93;
 }
 
-.triangle-right {
-  float: right;
-  width: 0;
-  height: 0;
-  border: 200px solid transparent;
-  border-top: 200px solid #eede93;
-  border-right: 200px solid #eede93;
+/*PC*/
+@media screen and (min-width: 1026px) {
+  .wrapper {
+    padding-bottom: 2vh;
+    width: 95%;
+    margin: auto;
+    border: solid 10px #eede93;
+  }
+
+  .triangle-left {
+    float: left;
+    width: 0;
+    height: 0;
+    border: 200px solid transparent;
+    border-top: 200px solid #eede93;
+    border-left: 200px solid #eede93;
+  }
+
+  .triangle-right {
+    float: right;
+    width: 0;
+    height: 0;
+    border: 200px solid transparent;
+    border-top: 200px solid #eede93;
+    border-right: 200px solid #eede93;
+  }
 }
-/* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
+
+/*タブレット*/
+@media screen and (min-width: 482px) and (max-width: 1025px) {
+  .wrapper {
+    padding-bottom: 2vh;
+    width: 90%;
+    margin: auto;
+    border: solid 10px #eede93;
+  }
+  .triangle-left {
+    float: left;
+    width: 0;
+    height: 0;
+    border: 20vw solid transparent;
+    border-top: 20vw solid #eede93;
+    border-left: 20vw solid #eede93;
+  }
+
+  .triangle-right {
+    float: right;
+    width: 0;
+    height: 0;
+    border: 20vw solid transparent;
+    border-top: 20vw solid #eede93;
+    border-right: 20vw solid #eede93;
+  }
+}
+/*スマホ*/
+@media screen and (max-width: 481px) {
+  .wrapper {
+    padding-bottom: 2vh;
+    width: 85%;
+    margin: auto;
+    border: solid 10px #eede93;
+  }
+
+  .triangle-left {
+    float: left;
+    width: 0;
+    height: 0;
+    border: 20vw solid transparent;
+    border-top: 20vw solid #eede93;
+    border-left: 20vw solid #eede93;
+  }
+
+  .triangle-right {
+    float: right;
+    width: 0;
+    height: 0;
+    border: 20vw solid transparent;
+    border-top: 20vw solid #eede93;
+    border-right: 20vw solid #eede93;
+  }
+}
 </style>

@@ -1,10 +1,10 @@
 <template>
   <img
-    src="@/assets/usi.png"
+    src="@/assets/ushi.png"
     alt="牛"
     class="ushi"
     :style="{
-      transform: `translate(${x + dx}px, ${y + dy}px) scale(${scaleX *
+      transform: `translate(${x + dx}%, ${y + dy}px) scale(${scaleX *
         dScaleX}, ${scaleY * dScaleY}) rotate(${rotate + dRotate}deg)`,
       transition: `transform ${duration}ms ${easing}`,
     }"
@@ -17,8 +17,8 @@ import Time from "@/core/Time";
 export default {
   name: "Ushi",
   props: {
-    x: { type: Number, default: 200 },
-    y: { type: Number, default: 100 },
+    x: { type: Number, default: 0 },
+    y: { type: Number, default: -50 },
     scaleX: { type: Number, default: 1.0 },
     scaleY: { type: Number, default: 1.0 },
     rotate: { type: Number, default: 0 },
@@ -53,7 +53,7 @@ export default {
       await this.tween({ dScaleY: 0.7, easing: "ease" }, duration * 0.1);
       await this.tween({ dScaleY: 1.0, easing: "ease" }, duration * 0.1);
     },
-    async walk(step = 100, duration = 500) {
+    async walk(step, duration) {
       await this.tween(
         { dRotate: 10, dScaleY: 0.8, easing: "ease" },
         duration * 0.2
@@ -73,25 +73,48 @@ export default {
         duration * 0.1
       );
     },
-    async inversion() {
-      await this.tween({
-        dx: 350,
-        dy: 0,
-        dRotate: 0,
-        dScaleX: -0.8,
-        easing: "ease",
-      });
-    },
   },
 };
 </script>
 
 <style scoped>
-.ushi {
-  max-width: 80%;
-  position: absolute;
-  bottom: 55vh;
-  transform-origin: 90px 100%;
-  will-change: transform;
+/* PC */
+@media screen and (min-width: 1026px) {
+  .ushi {
+    width: 450px;
+    height: 480px;
+    max-width: 85%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform-origin: 90px 100%;
+    will-change: transform;
+  }
+}
+
+/*タブレット*/
+@media screen and (min-width: 482px) and (max-width: 1025px) {
+  .ushi {
+    display: block;
+    max-width: 70%;
+    width: 40vh;
+    height: 42vh;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform-origin: 90px 100%;
+    will-change: transform;
+  }
+}
+/*スマホ*/
+@media screen and (max-width: 481px) {
+  .ushi {
+    max-width: 40%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform-origin: 90px 100%;
+    will-change: transform;
+  }
 }
 </style>

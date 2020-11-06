@@ -4,7 +4,12 @@
       <Modal
         v-show="isModal"
         title="題名"
-        detail="内容だよん"
+        detail="内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。
+        内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。
+        内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。
+        内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。
+        内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。内容だよん。
+        内容だよん。内容だよん。内容だよん。内容だよん。"
         name="hogehoge"
         v-on:push="closeModal"
       />
@@ -12,51 +17,44 @@
 
     <ul class="arch">
       <li class="item" v-bind:class="pStyle">
-        <Round msg="も" />
+        <Round msg="も" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="じ" />
+        <Round msg="じ" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="が" />
+        <Round msg="が" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="は" />
+        <Round msg="は" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="い" />
+        <Round msg="い" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="り" />
+        <Round msg="り" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="よ" />
+        <Round msg="よ" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="る" />
+        <Round msg="る" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="け" />
+        <Round msg="け" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="ん" />
+        <Round msg="ん" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="!" />
+        <Round msg="!" :route="10" />
       </li>
       <li class="item" v-bind:class="pStyle">
-        <Round msg="!" />
+        <Round msg="!" :route="10" />
       </li>
     </ul>
 
-    <Ushi
-      ref="Ushi"
-      :x="100"
-      :y="300"
-      :scaleX="-0.8"
-      :scaleY="0.8"
-      v-show="ushi"
-    />
+    <Ushi ref="Ushi" :x="0" :y="-50" :scaleX="0.9" :scaleY="1" v-show="ushi" />
   </div>
 </template>
 
@@ -106,12 +104,20 @@ export default {
     async play() {
       const ushi = this.$refs.Ushi;
       await ushi.jump(100, 1500);
-      await ushi.walk(100, 1200);
-      await ushi.walk(60, 600);
-      await ushi.walk(40, 400);
-      await ushi.walk(100, 1200);
-      await ushi.jump(200, 2500);
-      await ushi.inversion();
+      await ushi.walk(-30, 600);
+      await ushi.walk(-20, 1000);
+      await ushi.walk(-50, 900);
+      await ushi.walk(-60, 900);
+      await ushi.walk(-50, 900);
+      await ushi.walk(-50, 900);
+      await ushi.jump(100, 1500);
+      await ushi.walk(10, 900);
+      await ushi.walk(50, 1500);
+      await ushi.walk(30, 800);
+      await ushi.walk(50, 1500);
+      await ushi.walk(20, 800);
+      await ushi.walk(50, 1500);
+      await ushi.jump(100, 1500);
       this.pStyle = "show";
     },
   },
@@ -144,20 +150,6 @@ export default {
   opacity: 0;
 }
 /* ------------------------------ */
-
-.hello {
-  height: 78vh;
-  background-color: #87c0bb;
-}
-
-.arch {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  bottom: 370px;
-}
 
 .arch .item {
   list-style: none;
@@ -274,6 +266,60 @@ export default {
   100% {
     opacity: 1;
     transform: translate(0, 50px);
+  }
+}
+
+/*PC*/
+@media screen and (min-width: 1026px) {
+  .hello {
+    height: 88vh;
+    background-color: #87c0bb;
+    /* background: url("/grid.svg") repeat; */
+  }
+
+  .arch {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 350px;
+  }
+}
+
+/*タブレット*/
+@media screen and (min-width: 482px) and (max-width: 1025px) {
+  .hello {
+    height: 90vh;
+    background-color: #87c0bb;
+    /* background: url("/grid.svg") repeat; */
+  }
+
+  .arch {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 42vw;
+  }
+}
+/*スマホ*/
+@media screen and (max-width: 481px) {
+  .hello {
+    height: 90vh;
+    background-color: #87c0bb;
+    width: 100%;
+    /* background: url("/grid.svg") repeat; */
+  }
+
+  .arch {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 80px;
   }
 }
 </style>
