@@ -1,29 +1,5 @@
-# keyaki
+# HappyNewYear2021
 
-## Project setup
-```
-npm install
-```
+> Newyear's special page at 2021
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- URL → [http://watataku.html.xdomain.jp/newyear/2021](http://watataku.html.xdomain.jp/newyear/2021).
