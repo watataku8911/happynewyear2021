@@ -4,19 +4,16 @@
       href="http://www.facebook.com/share.php?u=http://watataku.html.xdomain.jp/newyear/2021/"
       target="_blank"
       class="share-link"
-      ><img :src="path" alt="いいね!!" width="32" height="32"
-    /></a>
+      ><FbSvg /></a>
   </p>
 </template>
 
 <script>
+import FbSvg from "@/assets/icon/icon_facebook.svg"
 export default {
-  props: ["imageName"],
-  data() {
-    return {
-      path: require("../assets/icon/" + this.imageName),
-    };
-  },
+  components: {
+    FbSvg
+  }
 };
 </script>
 

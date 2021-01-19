@@ -16,8 +16,8 @@
             <HelloWorld />
              <Footer />
              <nav class="n-area">
-              <ShareTwitter imageName="icon_twitter_black.png" class="link-twitter" />
-              <ShareFacebook imageName="icon_facebook_black.png" class="link-facebook" />
+              <ShareTwitter class="link-twitter" />
+              <ShareFacebook class="link-facebook" />
             </nav>
           </main>
         </div>

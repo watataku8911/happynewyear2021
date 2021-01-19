@@ -4,19 +4,17 @@
       href="https://twitter.com/share?text=Happy new year at 2021&url=http://watataku.html.xdomain.jp/newyear/2021/ "
       target="_blank"
       class="share-link"
-      ><img :src="path" alt="ツイート" width="32" height="32"
+      ><TwitterSvg
     /></a>
   </p>
 </template>
 
 <script>
+import TwitterSvg from "@/assets/icon/icon_twitter.svg"
 export default {
-  props: ["imageName"],
-  data() {
-    return {
-      path: require("@/assets/icon/" + this.imageName),
-    };
-  },
+  components: {
+    TwitterSvg
+  }
 };
 </script>
 
