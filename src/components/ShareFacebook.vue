@@ -1,19 +1,20 @@
 <template>
   <p>
     <a
-      href="http://www.facebook.com/share.php?u=http://watataku.html.xdomain.jp/newyear/2021/"
+      href="http://www.facebook.com/share.php?u=https://watataku8911.github.io/happynewyear2021/"
       target="_blank"
       class="share-link"
-      ><FbSvg /></a>
+      ><FbSvg
+    /></a>
   </p>
 </template>
 
 <script>
-import FbSvg from "@/assets/icon/icon_facebook.svg"
+import FbSvg from "@/assets/icon/icon_facebook.svg";
 export default {
   components: {
-    FbSvg
-  }
+    FbSvg,
+  },
 };
 </script>
 

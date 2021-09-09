@@ -273,7 +273,7 @@ export default {
 /*PC*/
 @media screen and (min-width: 1026px) {
   .hello {
-    height: 88vh;
+    height: 90vh;
     background-color: #87c0bb;
   }
 
