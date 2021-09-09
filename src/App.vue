@@ -14,8 +14,8 @@
           <div class="triangle-right"></div>
           <main>
             <HelloWorld />
-             <Footer />
-             <nav class="n-area">
+            <Footer />
+            <nav class="n-area">
               <ShareTwitter class="link-twitter" />
               <ShareFacebook class="link-facebook" />
             </nav>
@@ -40,7 +40,7 @@ export default {
     HelloWorld,
     Footer,
     ShareTwitter,
-    ShareFacebook
+    ShareFacebook,
   },
   data() {
     return {
@@ -86,7 +86,6 @@ export default {
 }
 /* ------------------------------------ */
 body {
-  /* margin-top: 2vh; */
   background-color: #87c0bb;
 }
 
@@ -103,7 +102,7 @@ body {
   margin: 0 auto;
   width: 30%;
   height: 50px;
-  font-size: 2em;
+  font-size: 2.5em;
   font-family: "Kaushan Script", cursive;
   font-family: "Bad Script", cursive;
   font-weight: bold;
@@ -126,13 +125,9 @@ body {
   }
 }
 
-
-
 /*PC*/
 @media screen and (min-width: 1026px) {
   .wrapper {
-    margin-bottom: 2vh;
-    padding-bottom: 2vh;
     width: 95%;
     margin: auto;
     border: solid 10px #eede93;
@@ -190,11 +185,11 @@ body {
     border-right: 15vw solid #eede93;
   }
 
-    .n-area {
-      position: absolute;
-      bottom: 2.5%;
-      left: 5.5%;
-    }
+  .n-area {
+    position: absolute;
+    bottom: 2.5%;
+    left: 5.5%;
+  }
 }
 /*スマホ*/
 @media screen and (max-width: 481px) {

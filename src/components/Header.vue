@@ -1,33 +1,14 @@
 <template>
   <header>
-    <p>
-      <a href="https://github.com/watataku8911/HappyNewYear2021" target="_blank"
-        >View Code</a
-      >
-    </p>
   </header>
 </template>
 
 <style scoped>
 
-a {
-  position: absolute;
-  top: 10px;
-  right: 40px;
-  text-decoration: none;
-  font-size: 17px;
-  color: black;
-}
-
-a:hover {
-  color: white;
-  font-weight: bold;
-}
-
 /* PC */
 @media screen and (min-width: 1026px) {
   header {
-    padding-top: 1vh;
+    padding-top: 0.5vh;
     background-color: #87c0bb;
     height:0.8vh;
     padding-bottom: 1vh;

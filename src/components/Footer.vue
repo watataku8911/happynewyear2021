@@ -1,10 +1,19 @@
 <template>
   <footer>
-    <small>&copy;2021 Watataku.</small>
+    <small>
+      <a href="https://watataku-portfolio.web.app" target="_blank">
+        &copy;2021 Watataku.
+      </a>
+    </small>
   </footer>
 </template>
 
 <style scoped>
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* PC */
 @media screen and (min-width: 1026px) {
   footer {
@@ -61,6 +70,4 @@
     text-align: center;
   }
 }
-
-
 </style>

@@ -1,7 +1,7 @@
 <template>
   <p>
     <a
-      href="https://twitter.com/share?text=Happy new year at 2021&url=http://watataku.html.xdomain.jp/newyear/2021/ "
+      href="https://twitter.com/share?text=Happy new year at 2021&url=https://watataku8911.github.io/happynewyear2021/ "
       target="_blank"
       class="share-link"
       ><TwitterSvg
@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import TwitterSvg from "@/assets/icon/icon_twitter.svg"
+import TwitterSvg from "@/assets/icon/icon_twitter.svg";
 export default {
   components: {
-    TwitterSvg
-  }
+    TwitterSvg,
+  },
 };
 </script>
 
