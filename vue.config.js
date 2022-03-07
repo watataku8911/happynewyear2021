@@ -2,6 +2,7 @@ module.exports = {
   outputDir: "docs",
   assetsDir: "./",
   publicPath: "./",
+  
   chainWebpack (config) {
     // Remove existing SVG rule which uses file-loader
     config.module.rules.delete('svg')
