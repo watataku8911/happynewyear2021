@@ -1,28 +1,20 @@
 <template>
   <div id="app">
-    <transition name="fade">
-      <section class="opning" v-show="!isLoading">
-        <p class="opning-msg anim-typewriter">Welcome to 2021.</p>
-      </section>
-    </transition>
-
-    <transition name="show">
-      <section class="main-contents" v-show="isLoading">
-        <Header />
-        <div class="wrapper">
-          <div class="triangle-left"></div>
-          <div class="triangle-right"></div>
-          <main>
-            <HelloWorld />
-            <Footer />
-            <nav class="n-area">
-              <ShareTwitter class="link-twitter" />
-              <ShareFacebook class="link-facebook" />
-            </nav>
-          </main>
-        </div>
-      </section>
-    </transition>
+    <section class="main-contents">
+      <Header />
+      <div class="wrapper">
+        <div class="triangle-left"></div>
+        <div class="triangle-right"></div>
+        <main>
+          <HelloWorld />
+          <Footer />
+          <nav class="n-area">
+            <ShareTwitter class="link-twitter" />
+            <ShareFacebook class="link-facebook" />
+          </nav>
+        </main>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -42,50 +34,11 @@ export default {
     ShareTwitter,
     ShareFacebook,
   },
-  data() {
-    return {
-      isLoading: false,
-    };
-  },
-  mounted() {
-    setTimeout(() => {
-      this.isLoading = true;
-    }, 6000);
-  },
 };
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
-/* -------------------------------
---------アニメーション----------------
------------------------------------- */
-.show-leave-active,
-.show-enter-active {
-  transition: opacity 1s;
-}
-
-.fade-leave-active,
-.fade-enter-active {
-  transition: opacity 1s;
-}
-
-/* 表示アニメーション */
-.show-enter {
-  opacity: 0;
-}
-.show-enter-to {
-  opacity: 1;
-}
-
-/* 非表示アニメーション */
-.fade-leave {
-  opacity: 1;
-}
-.fade-leave-to {
-  opacity: 0;
-}
-/* ------------------------------------ */
 body {
   background-color: #87c0bb;
 }

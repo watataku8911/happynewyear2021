@@ -93,7 +93,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.isModal = true;
-    }, 8000);
+    }, 1000);
   },
   methods: {
     closeModal(push) {

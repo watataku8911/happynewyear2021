@@ -1,5 +1,7 @@
 module.exports = {
-  publicPath: "newyear/2021",
+  outputDir: "docs",
+  assetsDir: "./",
+  publicPath: "./",
 
   chainWebpack (config) {
     // Remove existing SVG rule which uses file-loader
