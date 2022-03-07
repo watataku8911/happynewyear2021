@@ -2,4 +2,4 @@
 
 > Newyear's special page at 2021
 
-- URL → [http://watataku.html.xdomain.jp/newyear/2021](http://watataku.html.xdomain.jp/newyear/2021).
+- URL → [https://watataku8911.github.io/happynewyear2021/](https://watataku8911.github.io/happynewyear2021/).
